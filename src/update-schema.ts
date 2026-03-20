@@ -13,7 +13,6 @@ export const updateSchema = async () => {
   }
 };
 
-// Jika dijalankan manual via ts-node src/update-schema.ts
 if (require.main === module) {
   updateSchema();
 }

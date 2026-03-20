@@ -1,0 +1,54 @@
+@baseUrl = http://localhost:9090/v1/auth
+
+### 1. Mendaftar (Register) Akun Baru
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "email": "budi@gmail.com",
+  "password": "rahasia123",
+  "nickname": "Budi Setiawan"
+}
+
+### 
+
+### 2. Masuk (Login)
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "budi@gmail.com",
+  "password": "rahasia123"
+}
+
+###
+
+### 3. Simulasi Login Google (OAuth)
+POST {{baseUrl}}/login/google
+Content-Type: application/json
+
+{
+  "email": "budi.google@gmail.com",
+  "name": "Budi Google",
+  "picture": "https://lh3.googleusercontent.com/a/budi"
+}
+
+###
+
+### 4. Cek Data Profil Sendiri Saat Ini
+GET http://localhost:9090/v1/profile
+Authorization: Bearer 4e644b1f1d55e7bfdcca3ffea0f4c253dcc23d68e233cbbc1c75b677ec6add9c
+
+### 
+
+### 5. Mengubah/Menambah Data Profil 
+PUT http://localhost:9090/v1/profile
+Authorization: Bearer 4e644b1f1d55e7bfdcca3ffea0f4c253dcc23d68e233cbbc1c75b677ec6add9c
+Content-Type: application/json
+
+{
+  "bio": "Masinis Backend Handal!",
+  "gender": "Laki-laki",
+  "birthDate": "2000-01-01",
+  
+}

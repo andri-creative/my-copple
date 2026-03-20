@@ -1,4 +1,4 @@
-import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
+import { Entity, PrimaryKey, Property, OneToOne } from "@mikro-orm/core";
 
 @Entity()
 export class User {
@@ -11,8 +11,17 @@ export class User {
     @Property({unique: true})
     email!: string
 
+    @Property({ hidden: true })
+    password!: string
+
     @Property()
-    pictures!: string
+    provider!: string
+
+    @Property({ unique: true })
+    code!: string
+
+    @OneToOne({ entity: () => User, nullable: true })
+    partner?: User
 
     @Property({onCreate: () => new Date() })
     createdAt!: Date
