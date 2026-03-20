@@ -5,9 +5,9 @@ POST {{baseUrl}}/register
 Content-Type: application/json
 
 {
-  "email": "budi@gmail.com",
+  "email": "maya@gmail.com",
   "password": "rahasia123",
-  "nickname": "Budi Setiawan"
+  "nickname": "Maya Sari"
 }
 
 ### 
@@ -52,3 +52,21 @@ Content-Type: application/json
   "birthDate": "2000-01-01",
   
 }
+
+### 
+
+### 6. Menghubungkan Diri (Pairing) Ke Pasangan Lain
+POST http://localhost:9090/v1/couple/connect
+Authorization: Bearer 4e644b1f1d55e7bfdcca3ffea0f4c253dcc23d68e233cbbc1c75b677ec6add9c
+Content-Type: application/json
+
+{
+  "code": "7B7851"
+}
+
+### 
+
+### 7. Memutuskan (Disconnect) Hubungan Dari Pasangan Saat Ini
+# HARAP COPY TOKEN ANDA DI SINI
+POST http://localhost:9090/v1/couple/disconnect
+Authorization: Bearer <COPY_PASTE_TOKEN_LOGIN_ANDA_DISINI>

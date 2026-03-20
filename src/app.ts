@@ -2,6 +2,7 @@ import express from "express";
 import { updateSchema } from "./update-schema";
 import authRoutes from "./routes/authRoutes";
 import profileRoutes from "./routes/profileRoutes";
+import coupleRoutes from "./routes/coupleRoutes";
 import { MikroORM, RequestContext } from "@mikro-orm/mongodb";
 
 export const DI = {} as {
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 
 app.use("/v1/auth", authRoutes);
 app.use("/v1/profile", profileRoutes);
+app.use("/v1/couple", coupleRoutes);
 
 app.get('/', (req, res) => {
     res.json({
