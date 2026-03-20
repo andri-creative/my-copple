@@ -20,6 +20,9 @@ export class Profils{
 
     @Property()
     pictures!: string
+
+    @Property()
+    status!: string
     
     @Property({onCreate: () => new Date() })
     createdAt!: Date

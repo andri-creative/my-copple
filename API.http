@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:9090/v1/auth
+@baseUrl = http://192.168.110.220:9090/v1/auth
 
 ### 1. Mendaftar (Register) Akun Baru
 POST {{baseUrl}}/register
@@ -36,13 +36,13 @@ Content-Type: application/json
 ###
 
 ### 4. Cek Data Profil Sendiri Saat Ini
-GET http://localhost:9090/v1/profile
+GET http://192.168.110.220:9090/v1/profile
 Authorization: Bearer 4e644b1f1d55e7bfdcca3ffea0f4c253dcc23d68e233cbbc1c75b677ec6add9c
 
 ### 
 
 ### 5. Mengubah/Menambah Data Profil 
-PUT http://localhost:9090/v1/profile
+PUT http://192.168.110.220:9090/v1/profile
 Authorization: Bearer 4e644b1f1d55e7bfdcca3ffea0f4c253dcc23d68e233cbbc1c75b677ec6add9c
 Content-Type: application/json
 
@@ -50,7 +50,8 @@ Content-Type: application/json
   "bio": "Masinis Backend Handal!",
   "gender": "Laki-laki",
   "birthDate": "2000-01-01",
-  
+  "pictures": "https://lh3.googleusercontent.com/a/budi",
+  "status": "Pacaran"
 }
 
 ### 
