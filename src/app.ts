@@ -9,7 +9,10 @@ app.use('/', (req, res) => {
     res.json({
         message: "Copple my",
         status: false,
-
+        data: {
+            name: "Copple",
+            version: "1.0.0",
+        }
     })
 })
 
