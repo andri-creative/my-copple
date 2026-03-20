@@ -7,8 +7,9 @@ app.use(express.json());
 
 app.use('/', (req, res) => {
     res.json({
-        message: "Copple",
+        message: "Copple my",
         status: false,
+
     })
 })
 
